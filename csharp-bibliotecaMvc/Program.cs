@@ -10,11 +10,14 @@ builder.Services.AddControllersWithViews();
 //per connettersi al db:
 
 
+
 string sConnectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<BibliotecaContext>(options =>
   options.UseSqlServer(sConnectionString));
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+
 
 //end per connettersi al db
 
